@@ -4,15 +4,6 @@ import pyperclip as pc
 #completa_conexion(n):TE AUTOCOMPLETA UNA CLASE CON LA CONEXXION A UNA BBDD PASANDO COMO ARGUMENTO NOMBRE DE LA CLASE
 #completa_interfaz(n):AUTOCOMPLETA LOS MÉTODOS DE INTERFAZ DE LA VARIABLE PRIVADA QUE PASAS COMO ARGUMENTO
 
-def decorador(funcion_parametro):
-    def paste():
-        
-        funcion_parametro()
-        print('No se te olvide borrar la funcion de autocompletado')
-    return paste
-
-
-
 def autorelleno1(clave):
     return f'''
     @property
@@ -46,7 +37,7 @@ def autorelleno2(clave):
                 print("Error al intentar la conexión: {0}".format(ex))'''
 
 
-@decorador
+
 def completa_conexion(n):#TE AUTOCOMPLETA UNA CLASE CON LA CONEXXION A UNA BBDD PASANDO COMO ARGUMENTO NOMBRE DE LA CLASE
     prueba01=pc.copy(autorelleno2(n))
     keyboard = Controller()
