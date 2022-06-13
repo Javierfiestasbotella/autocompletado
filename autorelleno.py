@@ -36,7 +36,7 @@ def autorelleno2(clave):
             except Error as ex:
                 print("Error al intentar la conexión: {0}".format(ex))'''
 
-def autorelleno3(n,m):
+def autorelleno3(n,m):#verifica nobre de usuario
     return f'''
 def usuario():
         usser=input("Introduce un usuario : ")
