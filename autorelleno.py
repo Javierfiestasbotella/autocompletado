@@ -38,6 +38,7 @@ def autorelleno2(clave):
 
 def autorelleno3(n,m):#verifica nobre de usuario
     return f'''
+#Devuelve True si el nombre usuario es aceptado y verificado
 def usuario():
         usser=input("Introduce un usuario : ")
         if len(usser)<{n} or len(usser)>{m}:
@@ -49,6 +50,32 @@ def usuario():
         else:
             print(True)
         '''
+def autorelleno4(n):
+    return f'''
+def contraseña():
+  global passw
+  passw=input("Introduce contraseña: ")
+  if len(passw)<={n-1}:
+    print("La contraseña debe tener al menos {n} caractéres")
+    contraseña()
+  elif passw.isalnum()==True:
+    print ("La contraseña debe tener al menos un carácter no alfanumérico")
+    contraseña()
+  elif passw.lower() == passw:
+    print("Debe haber por lo menos una mayúscula")
+    contraseña()
+  elif passw.upper()==passw:
+    print("Debe haber por lo menos una minúscula")
+    contraseña()
+
+  for i in passw:
+    if i==" ":
+      print("La contraseña no debe tener espacios en blanco")
+      contraseña()
+  print(True)
+    
+    
+    '''
 
 
 
@@ -73,3 +100,11 @@ def verifica_ususario(n,m):#AUTOCOMPLETA VERIFICACION DE USUARIO; SOLO PUEDEN SE
     with keyboard.pressed(Key.ctrl):
         keyboard.press('v')
         keyboard.release('v')
+
+def verifica_password(n):#AUTOCOMPLETA FUNCION DE VERIFICACION DE EMAIL PASANDO COMO ARGUMENTO CANTIDAD MAX DE CARACTERES
+    prueba01=pc.copy(autorelleno4(n))
+    keyboard = Controller()
+    with keyboard.pressed(Key.ctrl):
+        keyboard.press('v')
+        keyboard.release('v')
+
