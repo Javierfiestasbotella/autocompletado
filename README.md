@@ -25,6 +25,7 @@ autocompleta de codigo
     from pynput.keyboard import Key, Controller</p>
 <h2>Notas
 </h2>
+    <p>Es importante saber que a la hora de ejecutar los comoandos es muy importante colocar el cursor don queires que se pegue el autocompletado.</p>
 <p>Todo cógigo tedioso, repetitivo y esqueletos, podemos llegar a ahorrar bastante tiempo</p>
 </body>
 </html>
