@@ -101,7 +101,7 @@ def verifica_ususario(n,m):#AUTOCOMPLETA VERIFICACION DE USUARIO; SOLO PUEDEN SE
         keyboard.press('v')
         keyboard.release('v')
 
-def verifica_password(n):#AUTOCOMPLETA FUNCION DE VERIFICACION DE EMAIL PASANDO COMO ARGUMENTO CANTIDAD MAX DE CARACTERES
+def verifica_password(n):#AUTOCOMPLETA FUNCION DE VERIFICACION DE PASSWORD PASANDO COMO ARGUMENTO CANTIDAD MAX DE CARACTERES
     prueba01=pc.copy(autorelleno4(n))
     keyboard = Controller()
     with keyboard.pressed(Key.ctrl):
