@@ -124,7 +124,7 @@ def verifica_password(n):#AUTOCOMPLETA FUNCION DE VERIFICACION DE PASSWORD PASAN
         keyboard.press('v')
         keyboard.release('v')
 
-def guarda_en_archivo():#CREA UN ARCHIVO CON EL NOMBRE DEL PRIMER ARGUMENTO Y GUARDA LA INFORMACION QUE GUARDAS EN EL SEGUNDO ARGUMENTO QUE DEBES INTRODUCIR LUEGO.
+def guarda_en_archivo():#CREA EL ARCHIVO CON EL NOMBRE DEL PRIMER ARGUMENTO Y GUARDA LA INFORMACION QUE GUARDAS EN EL SEGUNDO ARGUMENTO QUE DEBES INTRODUCIR LUEGO.
     prueba01=pc.copy(autorelleno5())
     keyboard = Controller()
     with keyboard.pressed(Key.ctrl):
