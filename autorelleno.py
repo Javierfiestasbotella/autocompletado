@@ -1,5 +1,12 @@
 from pynput.keyboard import Key, Controller
 import pyperclip as pc
+import os
+import io
+from io import open
+from datetime import datetime
+from datetime import date
+import datetime
+
 
 #completa_conexion(n):TE AUTOCOMPLETA UNA CLASE CON LA CONEXXION A UNA BBDD PASANDO COMO ARGUMENTO NOMBRE DE LA CLASE
 #completa_interfaz(n):AUTOCOMPLETA LOS MÉTODOS DE INTERFAZ DE LA VARIABLE PRIVADA QUE PASAS COMO ARGUMENTO
@@ -76,7 +83,16 @@ def contraseña():
     
     
     '''
-
+def autorelleno5():
+    return f'''
+    #NO OLVIDES DARLE UNA EXTENSION AL NOMBRE DEL ARCHIVO DEL PRIMER ARGUMENTO
+    #SUSTITUYE EN LA LLAMADA A LA FUNCION escribir(); EL ARCHIVO POR EL NOMBRE DEL ARCHIVO Y DOCUMENTACIÓN POR LO QUE QUIERAS DENTRO DEL ARCHIVO.
+    def escribir(archivo,documentacion):
+        fichero = open(archivo, 'a')
+        fichero.write(documentacion)
+        fichero.close()
+    escribir(archivo,documentacion)
+    '''
 
 
 def completa_conexion(n):#TE AUTOCOMPLETA UNA CLASE CON LA CONEXXION A UNA BBDD PASANDO COMO ARGUMENTO NOMBRE DE LA CLASE
@@ -107,4 +123,13 @@ def verifica_password(n):#AUTOCOMPLETA FUNCION DE VERIFICACION DE PASSWORD PASAN
     with keyboard.pressed(Key.ctrl):
         keyboard.press('v')
         keyboard.release('v')
+
+def guarda_en_archivo():#CREA UN ARCHIVO CON EL NOMBRE DEL PRIMER ARGUMENTO Y GUARDA LA INFORMACION QUE GUARDAS EN EL SEGUNDO ARGUMENTO
+    prueba01=pc.copy(autorelleno5())
+    keyboard = Controller()
+    with keyboard.pressed(Key.ctrl):
+        keyboard.press('v')
+        keyboard.release('v')
+
+
 
