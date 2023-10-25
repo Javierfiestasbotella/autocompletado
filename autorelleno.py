@@ -103,8 +103,11 @@ def completa_conexion(n):#TE AUTOCOMPLETA UNA CLASE CON LA CONEXXION A UNA BBDD 
         keyboard.release('v')
     
 
-def completa_interfaz(n):#AUTOCOMPLETA LOS MÉTODOS DE INTERFAZ DE LA VARIABLE PRIVADA QUE PASAS COMO ARGUMENTO
-    prueba01=pc.copy(autorelleno1(n))
+def completa_interfaz(variables):
+    autorelleno = ""
+    for variable in variables:
+        autorelleno += autorelleno1(variable) + "\n"
+    pc.copy(autorelleno)
     keyboard = Controller()
     with keyboard.pressed(Key.ctrl):
         keyboard.press('v')
@@ -132,4 +135,6 @@ def guarda_en_archivo():#CREA EL ARCHIVO CON EL NOMBRE DEL PRIMER ARGUMENTO Y GU
         keyboard.release('v')
 
 
+variables=['nombre','apellidos','edad','email']
 
+completa_interfaz(variables)
